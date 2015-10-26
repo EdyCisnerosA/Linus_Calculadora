@@ -164,8 +164,10 @@ int main(){
 	printf("\t\t Elija su Opci¢n:");
     
     scanf("%s", buffer);
+
     if( validar_es_numero(buffer, &Opcion) != true )
         Opcion = 999;
+    
 	switch (Opcion)
 	{
 	   case 1:
