@@ -129,7 +129,7 @@ double Raiz_cuadrada (double a)
     return (sqrt (a));
 }
 double Potencia(double a, double b){
-     printf("\ingrese el numero base para la potencia:");
+     printf("\ningrese el numero base para la potencia:");
      scanf ("%lf", &a);
      printf("Ingrese potencia: ");
      scanf("%lf", &b); 
@@ -160,13 +160,13 @@ double Tangente(double a){
 }
 
 double Arcseno(double a){
-     printf("Ingrese un Numero:");
+     printf("Ingrese un Numero: ");
      scanf ("%lf", &a);
      return(asin(a));
 }
 
 double Arccoseno(double a){
-     printf("Ingrese un Numero");
+     printf("Ingrese un Numero: ");
      scanf ("%lf", &a);
      return(acos(a));
 }
@@ -178,10 +178,46 @@ double Arctangente(double a){
 }
 
 double Ceil(double a){
-     printf("Ingrese un Numero");
+     printf("Ingrese un Numero: ");
      scanf ("%lf", &a);
      return(ceil(a));
 }
+
+double ArcoTangente2(double x,double y)
+{
+     printf("Datos en el intervalo [-PI,+PI]radianes");
+     printf("\nIngrese un Numero x: ");
+     scanf ("%lf", &x);
+     printf("Ingrese un Numero y: ");
+     scanf ("%lf", &x);
+     return(atan2(y,x));
+     
+}
+double CosenoHiperbolico(double x)
+{
+     printf("Ingrese un Numero: ");
+     scanf ("%lf", &x);
+     return(cosh(x));
+}
+double SenoHiperbolico(double x)
+{
+     printf("Ingrese un Numero: ");
+     scanf ("%lf", &x);
+     return(sinh(x));
+}
+double TangenteHiperbolico(double x)
+{
+     printf("Ingrese un Numero: ");
+     scanf ("%lf", &x);
+     return(tanh(x));
+}
+double Exponencial(double x)
+{
+     printf("Ingrese un Numero: ");
+     scanf ("%lf", &x);
+     return(exp(x));
+}
+
 
 // PROGRAMA PRINCIPAL
 int main(){
@@ -278,12 +314,28 @@ int main(){
 	   	resultado = Arccoseno(a);
  	   break;
 
-       case 13:
+           case 13:
 	   	resultado = Arctangente(a);
  	   break;
  	   
  	   case 14:
 	   	resultado = Ceil(a);
+ 	   break;
+	   case 15:
+	   	resultado = ArcoTangente2(a,b);
+ 	   break;
+           case 16:
+	   	resultado = CosenoHiperbolico(a);
+ 	   break;
+
+           case 17:
+	   	resultado = SenoHiperbolico(a);
+ 	   break;
+           case 18:
+	   	resultado = TangenteHiperbolico(a);
+ 	   break;
+           case 19:
+	   	resultado = Exponencial(a);
  	   break;
        default:
           Opcion = 999;
