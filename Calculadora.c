@@ -1,6 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <math.h>
+
+bool validar_es_numero(char buffer[], int *numeroReal){
+
+    int numero = 0, potencia = 0;
+    int longitud = strlen(buffer);
+
+    buffer = buffer + (longitud-1);
+    for( ; longitud > 0 ; ){
+
+        int entero = *buffer - '0';
+        if( entero>=0 && entero<=9 ){
+
+            numero = numero + entero*pow(10,potencia);
+            buffer--;
+            longitud--;
+            potencia++;
+
+        }
+        else
+            return false;
+        
+    }
+
+    *numeroReal = numero;
+
+    return true;
+
+}
 
 double Suma (double a, double b)
 {
@@ -102,6 +131,8 @@ double Ceil(double a){
 int main(){
 	double a, b, resultado;
 	int Opcion;
+    char buffer[9];
+
     while(1){
 	printf("\n\t\tCALCULADORA\n\n");
 	printf("\t 1.- Suma\n");
@@ -131,7 +162,10 @@ int main(){
     printf("\t 25.-Floor\n");
     printf("\t 26.-Fmod\n");
 	printf("\t\t Elija su Opci¢n:");
-	scanf("%d", &Opcion);
+    
+    scanf("%s", buffer);
+    if( validar_es_numero(buffer, &Opcion) != true )
+        Opcion = 999;
 	switch (Opcion)
 	{
 	   case 1:
@@ -191,6 +225,8 @@ int main(){
  	   case 14:
 	   	resultado = Ceil(a);
  	   break;
+       default:
+         printf("Opcion no valida, INTENTE otra vez solo con digitos.");
 	   }
 
   printf("\n El resultado de la opci¢n elegida es: %lf \n", resultado);
