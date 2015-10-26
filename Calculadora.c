@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 #include <math.h>
 
-bool validar_es_numero(char buffer[], int *numeroReal){
+bool validar_es_entero(char buffer[], int *numeroReal){
 
     int numero = 0, potencia = 0;
     int longitud = strlen(buffer);
@@ -19,7 +20,7 @@ bool validar_es_numero(char buffer[], int *numeroReal){
             longitud--;
             potencia++;
 
-        }
+        } 
         else
             return false;
         
@@ -31,13 +32,68 @@ bool validar_es_numero(char buffer[], int *numeroReal){
 
 }
 
+bool validar_es_flotante(char buffer[]){
+
+    int numero = 0, potencia = 0;
+    int longitud = strlen(buffer);
+    bool bandPunto = false;
+
+    buffer = buffer + (longitud-1);
+    for( ; longitud > 0 ; ){
+
+        int entero = *buffer - '0';
+        if( entero>=0 && entero<=9 ){
+
+            buffer--;
+            longitud--;
+
+        } else if( entero == -2 && longitud > 1 && bandPunto == false) {//valor -2 = punto decimal
+
+            bandPunto = true;
+            buffer--;
+            longitud--;
+
+        }
+        else
+            return false;
+        
+    }
+
+    return true;
+
+}
+
 double Suma (double a, double b)
 {
-     printf("Ingrese un numero: ");
-     scanf ("%lf", &a);
-     printf("Ingrese un numero: ");
-     scanf ("%lf", &b);
+     char buffer[9];
+     bool band = false;
+     int enteroDummy=0;
+
+     do{
+
+        printf("Ingrese un numero: ");
+        scanf("%s", buffer);
+        if( (band = validar_es_flotante(buffer)) == false )
+            printf("Porfavor solo enteros o flotantes.\n");
+        
+     } while( band == false );
+
+     a = strtod(buffer,NULL);   //convertimos el string validado a float
+
+     do{
+        
+        printf("Ingrese un numero: ");
+        //scanf ("%lf", &b);
+        scanf("%s", buffer);
+        if( (band = validar_es_flotante(buffer)) == false )
+            printf("Porfavor solo enteros o flotantes.\n");
+    
+     } while( band ==false );
+    
+     b = strtod(buffer,NULL);   //convertimos el string validado a float
+
      return (a + b); 
+
 }
 
 double Resta (double a, double b)
@@ -163,11 +219,13 @@ int main(){
     printf("\t 26.-Fmod\n");
 	printf("\t\t Elija su Opci¢n:");
     
+
     scanf("%s", buffer);
 
-    if( validar_es_numero(buffer, &Opcion) != true )
+    if( validar_es_entero(buffer, &Opcion) != true )
         Opcion = 999;
-    
+
+    resultado = 0.0;
 	switch (Opcion)
 	{
 	   case 1:
@@ -228,10 +286,12 @@ int main(){
 	   	resultado = Ceil(a);
  	   break;
        default:
+          Opcion = 999;
          printf("Opcion no valida, INTENTE otra vez solo con digitos.");
 	   }
 
-  printf("\n El resultado de la opci¢n elegida es: %lf \n", resultado);
+       if(Opcion<999)
+            printf("\n El resultado de la opci¢n elegida es: %lf \n", resultado);
   
   }
 
