@@ -218,6 +218,67 @@ double Exponencial(double x)
      return(exp(x));
 }
 
+double Frexp(double x, double frac){
+     /* Ingresado un número, lo descompone en un numero (fraccion) que multiplicado por dos y 
+     elevado a una potencia da el número inicial (x=mantisa *2^exp) */
+     int e;
+     printf("Ingrese un número:");
+     scanf ("%lf", &x);
+     frac = frexp(x, &e);
+     printf("x = %.2lf = %.2lf * 2^%d\n", x, frac, e);
+     return(frac);
+}
+
+double Idexp(double x, double ret){
+     /* Eleva al número dos a una potencia dada y lo multiplica por el número ingresado (x*2^exp) */
+     int n;
+     printf("Ingrese un número: ");
+     scanf("%lf", &x); 
+     printf("Ingrese la potencia:");
+     scanf ("%d", &n);
+     ret = ldexp(x ,n);
+     printf("%f * 2^%d = %f\n", x, n, ret);
+     return(ret);
+}
+
+double LogB10(double a){
+     printf("Ingrese el numero para el logaritmo:");
+     scanf ("%lf", &a);
+     return(log10(a));
+}
+
+double Modf(double x, double pfrac, double pent){
+     /* Separa en dos un número flotante, la parte entera y la parte decimal */
+     printf("Ingrese un número flotante (parte entera y parte decimal):");
+     scanf ("%lf", &x);
+     pfrac = modf(x,&pent);
+     printf("Parte entera: %lf\n", pent);
+     printf("Parte decimal: %lf \n", pfrac);
+     return(0);
+}
+
+double ValorAbsoluto(double a){
+     printf("Ingrese un número (positivo o negativo): ");
+     scanf ("%lf", &a);
+     return(fabs(a));
+}
+
+double Fmod(double a, double b, double resultado){
+     /* Devuelve el residuo de la división para un número flotante */
+     printf("Ingrese el divisor: ");
+     scanf ("%lf", &a);
+     printf("Ingrese el dividendo: ");
+     scanf("%lf", &b); 
+     resultado = fmod(a,b);
+     printf("Residuo de %f / %f es %lf\n", a, b, resultado);
+     return(resultado);
+}
+
+double Floor(double a){
+     printf("Ingrese un número decimal: ");
+     scanf ("%lf", &a);
+     return(floor(a));
+}
 
 // PROGRAMA PRINCIPAL
 int main(){
@@ -229,7 +290,7 @@ int main(){
 	printf("\n\t\tCALCULADORA\n\n");
 	printf("\t 1.- Suma\n");
 	printf("\t 2.- Resta\n");
-	printf("\t 3.- Multplicaci�n\n");
+	printf("\t 3.- Multplicaci¢n\n");
 	printf("\t 4.- Division\n");
 	printf("\t 5.- Raiz cuadrada\n");
 	printf("\t 6.- Potencia\n");
@@ -253,7 +314,7 @@ int main(){
     printf("\t 24.-Valor Absoluto\n");
     printf("\t 25.-Floor\n");
     printf("\t 26.-Fmod\n");
-	printf("\t\t Elija su Opci�n:");
+	printf("\t\t Elija su Opci¢n:");
     
 
     scanf("%s", buffer);
@@ -337,13 +398,42 @@ int main(){
            case 19:
 	   	resultado = Exponencial(a);
  	   break;
+ 	   
+ 	   case 20:
+	   	resultado = Frexp(a,b);
+ 	   break;
+ 	   
+ 	   case 21:
+	   	resultado = Idexp(a,b);
+ 	   break;
+ 	   
+ 	   case 22:
+	   	resultado = LogB10(a);
+ 	   break;
+ 	   
+ 	   case 23:
+	   	resultado = Modf(a,b,resultado);
+ 	   break;
+ 	   
+ 	   case 24:
+	   	resultado = ValorAbsoluto(a);
+ 	   break;
+ 	   
+ 	   case 25:
+	   	resultado = Fmod(a,b, resultado);
+ 	   break;
+ 	  
+	   case 26:
+	   	resultado = Floor(a);
+ 	   break; 
+ 	   
        default:
           Opcion = 999;
          printf("Opcion no valida, INTENTE otra vez solo con digitos.");
 	   }
 
        if(Opcion<999)
-            printf("\n El resultado de la opci�n elegida es: %lf \n", resultado);
+            printf("\n El resultado de la opci¢n elegida es: %lf \n", resultado);
   
   }
 
