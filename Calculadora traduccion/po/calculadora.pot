@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: calculadora 0.1\n"
+"Report-Msgid-Bugs-To: edy.cisneros1893@gmail.com\n"
+"POT-Creation-Date: 2015-10-27 21:32-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: calculadora.c:333
+#, c-format
+msgid "\t\t Choose your option: "
+msgstr ""
+
+#: calculadora.c:307
+#, c-format
+msgid "\t 1.- Sum\n"
+msgstr ""
+
+#: calculadora.c:316
+#, c-format
+msgid "\t 10.-Tangent\n"
+msgstr ""
+
+#: calculadora.c:317
+#, c-format
+msgid "\t 11.-arc sine\n"
+msgstr ""
+
+#: calculadora.c:318
+#, c-format
+msgid "\t 12.-Arc Cosine\n"
+msgstr ""
+
+#: calculadora.c:319
+#, c-format
+msgid "\t 13.-Arc Tangent\n"
+msgstr ""
+
+#: calculadora.c:320
+#, c-format
+msgid "\t 14.-Ceil\n"
+msgstr ""
+
+#: calculadora.c:321
+#, c-format
+msgid "\t 15.-Arc Tangent (two parameters\n"
+msgstr ""
+
+#: calculadora.c:322
+#, c-format
+msgid "\t 16.-Hyperbolic Cosine\n"
+msgstr ""
+
+#: calculadora.c:323
+#, c-format
+msgid "\t 17.-Hyperbolic Sine\n"
+msgstr ""
+
+#: calculadora.c:324
+#, c-format
+msgid "\t 18.-Hyperbolic Tangent\n"
+msgstr ""
+
+#: calculadora.c:325
+#, c-format
+msgid "\t 19.-Exponential\n"
+msgstr ""
+
+#: calculadora.c:308
+#, c-format
+msgid "\t 2.- Subtraction\n"
+msgstr ""
+
+#: calculadora.c:326
+#, c-format
+msgid "\t 20.-Frexp\n"
+msgstr ""
+
+#: calculadora.c:327
+#, c-format
+msgid "\t 21.-Idexp\n"
+msgstr ""
+
+#: calculadora.c:328
+#, c-format
+msgid "\t 22.-Logarithm base ten\n"
+msgstr ""
+
+#: calculadora.c:329
+#, c-format
+msgid "\t 23.-Modf\n"
+msgstr ""
+
+#: calculadora.c:330
+#, c-format
+msgid "\t 24.-Absolute value\n"
+msgstr ""
+
+#: calculadora.c:331
+#, c-format
+msgid "\t 25.-Floor\n"
+msgstr ""
+
+#: calculadora.c:332
+#, c-format
+msgid "\t 26.-Fmod\n"
+msgstr ""
+
+#: calculadora.c:309
+#, c-format
+msgid "\t 3.- Multiplication\n"
+msgstr ""
+
+#: calculadora.c:310
+#, c-format
+msgid "\t 4.- Division\n"
+msgstr ""
+
+#: calculadora.c:311
+#, c-format
+msgid "\t 5.- Square Root\n"
+msgstr ""
+
+#: calculadora.c:312
+#, c-format
+msgid "\t 6.- Pow\n"
+msgstr ""
+
+#: calculadora.c:313
+#, c-format
+msgid "\t 7.- Natural Logarithm\n"
+msgstr ""
+
+#: calculadora.c:314
+#, c-format
+msgid "\t 8.- Sine\n"
+msgstr ""
+
+#: calculadora.c:315
+#, c-format
+msgid "\t 9.- Cosine\n"
+msgstr ""
+
+#: calculadora.c:306
+#, c-format
+msgid ""
+"\n"
+"\t\tCALCULATOR\n"
+"\n"
+msgstr ""
+
+#: calculadora.c:368 calculadora.c:454
+#, c-format
+msgid ""
+"\n"
+" The result of the chosen option: "
+msgstr ""
+
+#: calculadora.c:132
+#, c-format
+msgid ""
+"\n"
+" enter the number to which effect the root: "
+msgstr ""
+
+#: calculadora.c:262
+#, c-format
+msgid ""
+"\n"
+"Decimal part: "
+msgstr ""
+
+#: calculadora.c:194
+#, c-format
+msgid ""
+"\n"
+"Enter a number x: "
+msgstr ""
+
+#: calculadora.c:137
+#, c-format
+msgid ""
+"\n"
+"enter the base number to pow:"
+msgstr ""
+
+#: calculadora.c:193
+#, c-format
+msgid "Data in the range [ -PI , + PI ] radians"
+msgstr ""
+
+#: calculadora.c:288
+#, c-format
+msgid "Enter a decimal number: "
+msgstr ""
+
+#: calculadora.c:257
+#, c-format
+msgid "Enter a floating number ( integer and fractional part):"
+msgstr ""
+
+#: calculadora.c:268
+#, c-format
+msgid "Enter a number (positive or negative): "
+msgstr ""
+
+#: calculadora.c:196
+#, c-format
+msgid "Enter a number y: "
+msgstr ""
+
+#: calculadora.c:79 calculadora.c:90 calculadora.c:106 calculadora.c:115
+#: calculadora.c:117 calculadora.c:123 calculadora.c:125 calculadora.c:145
+#: calculadora.c:150 calculadora.c:156 calculadora.c:162 calculadora.c:168
+#: calculadora.c:174 calculadora.c:180 calculadora.c:186 calculadora.c:203
+#: calculadora.c:209 calculadora.c:215 calculadora.c:221 calculadora.c:230
+#: calculadora.c:240 calculadora.c:250
+#, c-format
+msgid "Enter a number: "
+msgstr ""
+
+#: calculadora.c:242
+#, c-format
+msgid "Enter pow:"
+msgstr ""
+
+#: calculadora.c:139
+#, c-format
+msgid "Enter pow: "
+msgstr ""
+
+#: calculadora.c:277
+#, c-format
+msgid "Enter the dividend: "
+msgstr ""
+
+#: calculadora.c:275
+#, c-format
+msgid "Enter the divisor: "
+msgstr ""
+
+#: calculadora.c:260
+#, c-format
+msgid "Integer part : "
+msgstr ""
+
+#: calculadora.c:450
+#, c-format
+msgid "Invalid option , try again only digits."
+msgstr ""
+
+#: calculadora.c:82 calculadora.c:94
+#, c-format
+msgid "Please only integer or floating.\n"
+msgstr ""
+
+#: calculadora.c:280
+#, c-format
+msgid "Residue of"
+msgstr ""
+
+#: calculadora.c:282
+#, c-format
+msgid "is"
+msgstr ""
